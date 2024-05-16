@@ -31,6 +31,27 @@
     <label><input type="radio" name="greeting_Type" value="Doctor"> Doctor</label>
 
 
+    <label for="working">Are you working?</label>
+    <input type="checkbox" id="working" onchange="toggleWorkingHours()">
+
+    <div id="workingHours" style="display: none;">
+      <label for="hours">Working Hours:</label>
+      <input type="number" id="hours">
+
+      <label for="rate">Hourly Rate:</label>
+      <input type="number" id="rate">
+
+      <label for="taxRate">Tax Rate:</label>
+      <input type="number" id="taxRate">
+    </div>
+
+    <div id="errorMessage" class="error-message"></div>
+
+    <button type="button" onclick="calculateSalary()">Calculate Salary</button>
+    <button type="reset">Reset</button>
+
+
+
     </form>
     <script src = ./script/code.js></script>
 </body>
